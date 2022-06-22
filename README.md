@@ -18,11 +18,11 @@ Pytorch
 
 ## Result
 
-<img src = "./result.PNG" width="50%"> 
+<img src = "./loss.PNG" width="50%"> 
 result loss
 
 <br/>
 <br/>
 
-<img src = "./loss.PNG" width="50%"> 
+<img src = "./result.PNG" width="50%"> 
 Generated image to image
