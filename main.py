@@ -46,7 +46,7 @@ def train(model_dis, model_gen):
 
     for epoch in range(num_epochs):
         for a, b in train_dl:
-            # image a: input(noise) , image b: ground truth
+            # image a: input image(x) , image b: ground truth(y)
             # print("a.size(): ", a.size()) # torch.Size([32, 3, 256, 256])
             # print("b.size(): ", b.size()) # torch.Size([32, 3, 256, 256])
             ba_si = a.size(0) # 32
@@ -64,7 +64,7 @@ def train(model_dis, model_gen):
 
             fake_b = model_gen(real_a)  # 가짜 이미지 생성 # torch.Size([32, 3, 256, 256])
             out_dis = model_dis(fake_b, real_b)  # 가짜 이미지 식별 # torch.Size([32, 1, 16, 16])
-            # 가짜 image에 대한 condition으로 ground truth를 활용하는 꼴
+            # 가짜 image에 대한 condition으로 input 사용
 
             gen_loss = loss_func_gan(out_dis, real_patch_label) # discriminator를 속이기 위해 real label로 학습
             pixel_loss = loss_func_pix(fake_b, real_b) # 가짜 이미지와 ground truth를 비교
@@ -76,7 +76,7 @@ def train(model_dis, model_gen):
             # discriminator
             model_dis.zero_grad()
 
-            out_dis = model_dis(real_b, real_a)  # 진짜 이미지 식별, ground truth와 input 비교, ground truth가 condition
+            out_dis = model_dis(real_b, real_a)  # 진짜 이미지 식별, ground truth와 input 비교, input이 condition
             real_loss = loss_func_gan(out_dis, real_patch_label)
 
             out_dis = model_dis(fake_b.detach(), real_a)  # 가짜 이미지 식별
