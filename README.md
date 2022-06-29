@@ -18,11 +18,11 @@ Pytorch
 
 ## Experimental Result
 
-<img src = "./Experiments_detail.PNG" width="50%"> 
-Detail of experiments
+<img src = "./loss.PNG" width="50%"> 
+Loss
 
 <br/>
 <br/>
 
-<img src = "./Experiments.PNG" width="50%"> 
-Additioal experimental results
+<img src = "./result.PNG" width="50%"> 
+Result of pix2pix
