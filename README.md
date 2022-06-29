@@ -1,16 +1,23 @@
 # Pix2Pix
 Pix2Pix(Image-to-Image Translation with Conditional Adversarial Networks) code and description
 
+<br/>
+
 ## Paper
 https://arxiv.org/pdf/1905.03677.pdf
+
+<br/>
+
+## Dataset
+
 
 <br/>
 
 ## Application technology
 ```
 Python  
-CNN
-Active learning
+GAN(Generative Adversarial Nets)
+CNN(Convolutional Neural Network)
 Pytorch  
 ```
 
