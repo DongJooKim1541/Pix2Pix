@@ -2,32 +2,27 @@
 Pix2Pix(Image-to-Image Translation with Conditional Adversarial Networks) code and description
 
 ## Paper
-https://arxiv.org/pdf/1611.07004.pdf
-
-<br/>
-
-## Dataset
-https://github.com/mrzhu-cool/pix2pix-pytorch/blob/master/dataset/facades.zip
+https://arxiv.org/pdf/1905.03677.pdf
 
 <br/>
 
 ## Application technology
 ```
 Python  
-GAN(Generative Adversarial Nets)
-U-Net
+CNN
+Active learning
 Pytorch  
 ```
 
 <br/>
 
-## Result
+## Experimental Result
 
-<img src = "./loss.PNG" width="50%"> 
-result loss
+<img src = "./Experiments_detail.PNG" width="50%"> 
+Detail of experiments
 
 <br/>
 <br/>
 
-<img src = "./result.PNG" width="50%"> 
-Generated image to image
+<img src = "./Experiments.PNG" width="50%"> 
+Additioal experimental results
